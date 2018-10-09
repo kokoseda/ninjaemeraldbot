@@ -419,7 +419,7 @@ client.on("message", message => {
            .setDescription(`**:musical_note:أوامر الميوزك|Music Commandes:musical_note:**
 **$play ⇏ لتشغيل أغنية برآبط أو بأسم**
 **$skip ⇏ لتجآوز الأغنية الحآلية**
-**-pause ⇏ إيقآف الأغنية مؤقتا**
+**$pause ⇏ إيقآف الأغنية مؤقتا**
 **$resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا**
 **$volume ⇏ لتغيير درجة الصوت 100 - 0**
 **$stop ⇏ لإخرآج البوت من الروم**
