@@ -50,6 +50,7 @@
     "sqlite3": "^4.0.0",
     "youtube-info": "^1.2.0",
     "ytdl-core": "^0.20.3",
+    "hastebin-gen": "^1.3.1",
     "queue": "*"
   },
   "devDependencies": {
