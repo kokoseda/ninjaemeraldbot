@@ -293,6 +293,8 @@ client.on("message", message => {
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   **__$mhelp__-> تظهر اوامر الميوزك
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__$dis__->**تظهر اسماء لتغير تاج خاص بك
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   **__$help__->**تظهر لك هذي القائمة
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- `)
      message.author.sendEmbed(embed)
@@ -817,7 +819,7 @@ client.on("message", message => {
        const embed = new Discord.RichEmbed()
            .setColor("RANDOM")
            .setFooter('©Ninja Bot')  
-           .addField('❤سيرفر الدعم الفني', `  https://discord.gg/ZHKqrRW  `)
+           .addField('❤سيرفر الدعم الفني', `  https://discord.gg/CyynY97  `)
        message.author.send({embed});
      
       }
@@ -7862,7 +7864,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
                   .addField('``My Prefix``' , `[-]` , true)
                   .addField('``My Language``' , `[ Java Script ]` , true)
-                  .setFooter('By | ♪ZeyadChannel♪.🔝#5717')
+                  .setFooter('By | Fr3onGamer#0440')
     })
 }
 });
@@ -8996,6 +8998,50 @@ client.on('message', msg => {
     if (command === 'guide') return msg.channel.send('https://git.io/d.js-heroku');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
 });
+
+
+const hastebin = require('hastebin-gen');
+client.on('message', message => {
+var PREFIX = '$';
+    if(message.content.startsWith(PREFIX + 'dis')) {
+            var args = message.content.split(' ').slice(1).join(' ');
+}
+      var array = [];
+      var i = 0;
+      if(args){
+client.users.filter(u => u.discriminator == args).map(u => {
+    if(i > 4){
+     return;
+    }
+    i = i + 1;
+ 
+   array.push(`${u.tag}`);
+});
+}
+hastebin(`${array.slice(0, 30).join('\n')}`, 'txt').then(l => {
+    message.channel.send(`${l}`);
+}).catch(console.error);
+});
+client.on('message' , message => {
+var PREFIX = '$';
+if(message.content === `${PREFIX}dis         `         ) {
+                      let array = [];
+                      var i = 0;
+client.users.filter(u => u.discriminator == message.author.discriminator).map(u => {
+    if(i > 4){
+     return;
+    }
+    i = i + 1;
+   array.push(`${u.tag}`);
+});
+hastebin(`${array.slice(0, 30).join('\n')}`, 'txt').then(l => {
+    message.channel.send(`${l}`);
+}).catch(console.error);
+ 
+        }
+});
+
+
 
 
 
