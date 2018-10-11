@@ -9165,7 +9165,6 @@ Role : __${ar[message.guild.id].role}__`)
 
     fs.writeFile("./AutoRole.json", JSON.stringify(ar), (err) => {
     if (err) console.error(err)
-	      }
     }
   }
 });
