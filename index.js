@@ -9101,8 +9101,7 @@ client.on('message', message => {
 
 
 
-const Discord = require("discord.js");
-const fs = require("fs")
+
 const client = new Discord.Client();
 let ar = JSON.parse(fs.readFileSync(`./AutoRole.json`, `utf8`))
 
