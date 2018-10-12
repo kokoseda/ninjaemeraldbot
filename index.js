@@ -246,7 +246,7 @@ client.on("message", message => {
   
   
   
-   client.on("message", message => {
+  client.on("message", message => {
       if (message.content === "$help") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF0000")
@@ -9132,6 +9132,40 @@ Server Count: __${guild.memberCount}__**`)
 
 
  const premium = ['314135031029170197','id','id'];
+let premiumprefix = "$";
+
+client.on("message", message => {
+      if (message.content === premiumprefix +  "$help") {
+       const embed = new Discord.RichEmbed() 
+           .setColor("#FF0000")
+           .setDescription(`**🕴🏾اوامر البريميوم|Premium Commands🕴🏾**
+  **__$setName__-**لتغير اسم بوت 
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__$setPlaying__-**لتغير حالة لعب بوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__$setWatching__-** لتغير حالة مشاهدة بوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__$setListening__-** لتغير حالة سمع بوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+   **__$setStatus__->** لتغير حالة او وضع بوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__$setStreaming__-** لتغير حالة تويتش او ستريم
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- `)
+ message.author.sendEmbed(embed)
+     
+     }
+     });
+
+
+
+
+
+
+
+
+
+
+
 
 client.on('message', message => {
     let argresult = message.content.split(` `).slice(1).join(' ');
@@ -9146,7 +9180,7 @@ client.on('message', message => {
       } else if(message.content.startsWith(prefix + 'setListening')) {
         client.user.setActivity(argresult,{type: 'LISTENING'});
 
-      } else if(message.content.startsWith(prefix + 'setPlaying')) {
+      } else if(message.content.sartsWith(prefix + 'setPlaying')) {
         client.user.setActivity(argresult,{type: 'PLAYING'});
 
       } else if(message.content.startsWith(prefix + 'setName')) {
