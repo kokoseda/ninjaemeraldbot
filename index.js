@@ -9180,7 +9180,7 @@ client.on('message', message => {
       } else if(message.content.startsWith(prefix + 'setListening')) {
         client.user.setActivity(argresult,{type: 'LISTENING'});
 
-      } else if(message.content.sartsWith(prefix + 'setPlaying')) {
+      } else if(message.content.startsWith(prefix + 'setName')) {
         client.user.setActivity(argresult,{type: 'PLAYING'});
 
       } else if(message.content.startsWith(prefix + 'setName')) {
