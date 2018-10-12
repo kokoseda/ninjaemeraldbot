@@ -9132,10 +9132,13 @@ Server Count: __${guild.memberCount}__**`)
 
 
  const premium = ['314135031029170197','id','id'];
+
+
 let premiumprefix = "$";
 
 client.on("message", message => {
-      if (message.content === premiumprefix +  "$help") {
+      if (message.content === premiumprefix +  "help") {
+      if(message.author.id !== 'ايدي تبعك', '314135031029170197') return message.channel.send('❎ » لن يتم ارسال اوامر بريميوم بالخاص');
        const embed = new Discord.RichEmbed() 
            .setColor("#FF0000")
            .setDescription(`**🕴🏾اوامر البريميوم|Premium Commands🕴🏾**
@@ -9154,9 +9157,8 @@ client.on("message", message => {
  message.author.sendEmbed(embed)
      
      }
-     });
-
-
+     }); 
+ 
 
 
 
